@@ -13,8 +13,9 @@
 
     <hr id="stroke">
     <p id="name"> JØRGEN JOHANSEN </p>
-    <p id='stuideSted'>Universitetet i Agder</p>
     <p id='studie'> Master i Informasjonssystemer </p>
+    <p id='stuideSted'>Universitetet i Agder</p>
+
 
     <!--<div id="clientInfo">
     <p id="userStats">
