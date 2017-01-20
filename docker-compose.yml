@@ -1,0 +1,16 @@
+web:
+  build: .
+  restart: always
+  ports:
+    - "80:80"
+  volumes:
+    - ./html:/usr/share/nginx/html
+  links:
+    - php
+
+php:
+  image: nmcteam/php56
+  restart: always
+  volumes:
+    - ./php-fpm.conf:/etc/php5/fpm/php-fpm.conf
+    - ./html:/usr/share/nginx/html
