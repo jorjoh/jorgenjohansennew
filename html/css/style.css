@@ -25,7 +25,7 @@ Header
 **************************************/
 .section-padding
 {
-	padding: 40px 0px;
+	padding: 143px 0px;
 }
 .main-navigation
 {
@@ -330,7 +330,7 @@ margin-top: 5px;
 	font-size: 24px;
 }
 
-/* Contact Form */ 
+/* Contact Form */
 .text-field-box {
     background: #fff;
     border: 1px solid #ddd;
@@ -453,8 +453,7 @@ margin-top: 5px;
 }
 #banner
 {
-    background: url('../img/Stars-HD-Wallpapers-Blue-Background.jpg') no-repeat;
-    background-size: cover;
+    background: url('../img/Stars-HD-Wallpapers-Blue-Background.jpg');
     min-height: 500px;
 }
 .cta2 .btn-default,.cta2 .btn-default:hover,.cta2 .btn-default:focus

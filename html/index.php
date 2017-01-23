@@ -43,8 +43,8 @@
 	</div>
 	<!--HEADER END-->
 
-	<!--BANNER START-->
-	<div id="banner" class="section-padding">
+	<!--  START-->
+	<div id="banner" class="section-padding" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row">
 				<div class="jumbotron">
@@ -199,7 +199,7 @@
 		</div>
 	</div>
 	<!--TEAM END-->
-    
+
 	<!--CTA2 START-->
 	<!--<div class="cta2">
 		<div class="container">
@@ -223,7 +223,7 @@
 				</div>
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                 <div id="errormessage"></div>
-                
+
 				<div class="form-sec">
                 	<form action="" method="post" role="form" class="contactForm">
                     	<div class="col-md-4 form-group">
@@ -241,7 +241,7 @@
                         <div class="col-md-12 form-group">
                             <textarea class="form-control text-field-box" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                             <div class="validation"></div>
-            
+
                             <button class="button-medium" id="contact-submit" type="submit" name="send">Send</button>
                         </div>
                     </form>
@@ -264,7 +264,7 @@
 							<li><a class="f_google" href="#"><i class="fa fa-google-plus"></i></a></li>
 							<li><a class="f_linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
 						</ul>
-					</div>																
+					</div>
 				</div>&lt;!&ndash;- END COL &ndash;&gt;
 			</div>&lt;!&ndash;- END ROW &ndash;&gt;
 		</div>&lt;!&ndash;- END CONTAINER &ndash;&gt;
@@ -274,10 +274,10 @@
 		<div class="container">
 			<div style="visibility: visible; animation-name: zoomIn;" class="col-md-12 text-center wow zoomIn">
 				<div class="footer_copyright">
-					<p> © Copyright, All Rights Reserved.</p>					
+					<p> © Copyright, All Rights Reserved.</p>
 					<div class="credits">
-                        <!-- 
-                            All the links in the footer should remain intact. 
+                        <!--
+                            All the links in the footer should remain intact.
                             You can delete the links only if you purchased the pro version.
                             Licensing information: https://bootstrapmade.com/license/
                             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Tempo
@@ -289,13 +289,13 @@
 		</div>
 	</div>
   	<script src="js/jquery.min.js"></script>
+    <script src="js/jquery.stellar.min.js"> </script>
   	<script src="js/jquery.easing.min.js"></script>
   	<script src="js/bootstrap.min.js"></script>
   	<script src="js/jquery.mixitup.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
     <script src="contactform/contactform.js"></script>
-    
 </body>
 </html>
 

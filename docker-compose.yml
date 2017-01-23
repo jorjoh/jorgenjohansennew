@@ -2,7 +2,7 @@ web:
   image: jorjoh/jorgenjohansennew
   restart: always
   ports:
-    - "8000:80"
+    - "80:80"
   volumes:
     - ./html:/usr/share/nginx/html
   links:
