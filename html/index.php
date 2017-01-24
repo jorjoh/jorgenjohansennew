@@ -9,8 +9,8 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:600,300|Josefin+Slab:400,700,600italic,600,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/slick-team-slider.css"/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!--<link rel="icon" href="favicon.png" type="image/png">
-  <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">-->
+  <link rel="icon" href="img/favicon/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="img/x-icon">
 
   <!-- =======================================================
         Theme Name: Tempo
