@@ -25,6 +25,10 @@ Header
 **************************************/
 .section-padding
 {
+	padding: 48px 0px;
+}
+.section-paddingBanner
+{
 	padding: 143px 0px;
 }
 .main-navigation

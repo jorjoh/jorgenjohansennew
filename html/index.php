@@ -44,7 +44,7 @@
 	<!--HEADER END-->
 
 	<!--  START-->
-	<div id="banner" class="section-padding" data-stellar-background-ratio="0.5">
+	<div id="banner" class="section-paddingBanner" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row">
 				<div class="jumbotron">
@@ -309,7 +309,7 @@
 
     //Deklarerer variabler som brukes i kontakt skjemaet
     $name = $_POST["name"];
-    $eMAil = $_POST["eMail"];
+    $eMail = $_POST["eMail"];
     $message = $_POST["message"];
     $subject_msg = $_POST["subject"];
     $send = $_POST["send"];
@@ -324,13 +324,13 @@
  //hvis knappen er trykket på kjør koden under
  if ((isset($_POST["send"]))) {
 	 //Sjekk om feltene er tomme
-	 if ($name == "" || $eMAil == "" || $message == "") {
+	 if ($name == "" || $eMail == "" || $message == "") {
 		 //Skriv feilmedling
 		 echo("Et eller flere av feltene er tomme");
 
 	 } // Ta informasjonen i feltene på send på epost til designert konto
 	 else {
-		 header('refresh: 4; url=index.php');
+		 //header('refresh: 4; url=index.php');
 		 $eMail = $_POST["eMail"];
 		 $to = "jorgen2_johansen@hotmail.com";
 		 $subject = $subject_msg;
@@ -344,20 +344,27 @@
 		 $usersubject = "Thank You";
 		 $userheaders = "From: you@youremailaddress.com\n";
 		 $usermessage = "Thank you for subscribing to our mailing list.";
-		 mail($to, $subject, $messageMain, $header, $message);
+
+     $sendseq = mail($to, $subject, $messageMain, $header, $message);
+
+     if($sendseq == true){
+       echo "Mail sendt";
+     }
+     else {
+       echo "Mail not sendt"."<br/>";
+       print_r(error_get_last())."<br/>";
+       echo "to:".$to."<br/>";
+       echo "Subject:".$subject."<br/>";
+       echo "MessageMain:".$messageMain."<br/>";
+       echo "Header:".$header."<br/>";
+       echo "Message:".$message;
+     }
 		 // mail($user,$user_message,$usersubject,$usermessage,$userheaders);
 
 		 echo("<p id ='sucsess'>Meldingen din er nå sendt!</p>");
 		 echo("<p id ='sucsess_redirect'>Du sendes nå tilbake til forsiden</p>");
 
-		 echo("<script type='text/javascript'>
-		 $(document).ready(function() {
-			 $('article').fadeOut(3000);
-		 });
- </script> ");
-
-
- }
+	}
  }
 
  ?>
