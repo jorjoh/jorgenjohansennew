@@ -65,4 +65,10 @@
         verticalOffset:0
       }
     );
+    var clientHeight = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
+    var navheight = $('.main-navigation').height();
+    //$('#banner').css('height', (clientHeight - navheight) + 'px');
+    console.log(clientHeight)
+
+    console.log(navheight)
 })(jQuery);

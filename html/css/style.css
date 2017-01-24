@@ -459,6 +459,8 @@ margin-top: 5px;
 {
     background: url('../img/Stars-HD-Wallpapers-Blue-Background.jpg');
     min-height: 500px;
+		box-sizing: border-box;
+
 }
 .cta2 .btn-default,.cta2 .btn-default:hover,.cta2 .btn-default:focus
 {

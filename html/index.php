@@ -51,7 +51,7 @@
 				  <h1 class="small">Jørgen Johansen</h1>
 				  <p class="big">Master i Informasjonssystemer</p>
 				  <p class="big">Universitetet i Agder</p>
-				  <a href="https://www.dropbox.com/s/qq4mtow3r8ul5rm/J%C3%B8rgen%20Johansen.pdf?dl=0" class="btn btn-banner">Se mer<i class="fa fa-send"></i></a>
+				  <a href="https://www.dropbox.com/s/qq4mtow3r8ul5rm/J%C3%B8rgen%20Johansen.pdf?dl=0" target="_blank" class="btn btn-banner">Se mer<i class="fa fa-send"></i></a>
 				</div>
 			</div>
 		</div>
@@ -295,7 +295,7 @@
   	<script src="js/jquery.mixitup.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
-    <script src="contactform/contactform.js"></script>
+  <script src="contactform/contactform.js"></script>
 </body>
 </html>
 
