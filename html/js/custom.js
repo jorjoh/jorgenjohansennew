@@ -67,7 +67,7 @@
     );
     var clientHeight = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
     var navheight = $('.main-navigation').height();
-    //$('#banner').css('height', (clientHeight - navheight) + 'px');
+    $('#banner').css('height', (clientHeight) + 'px');
     console.log(clientHeight)
 
     console.log(navheight)

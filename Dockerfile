@@ -14,6 +14,9 @@ MAINTAINER Jørgen Johansen
 # Update the repository
 RUN apt-get update
 
+RUN apt-get install -y postfix
+RUN apt-get install -y mailutils
+RUN apt-get install -y sendmail
 # Install necessary tools
 RUN apt-get install -y nano wget dialog net-tools
 

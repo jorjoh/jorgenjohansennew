@@ -85,8 +85,8 @@
                     <div class="service-box">
                         <div class="service-icon"><img src="img/vkt32.png"></div>
                         <div class="service-text">
-                            <h3>VKT - Chrome Extention</h3>
-                            <p> Enkel Chrome extention som henter ut bussinformasjon fra VKT kollektivtrafikk</p>
+                            <h3>VKT - Chrome Extension</h3>
+                            <p> Enkel Chrome extension som henter ut bussinformasjon fra VKT kollektivtrafikk</p>
                         </div>
                     </div>
                 </div>
@@ -94,8 +94,8 @@
 					<div class="service-box">
 						<div class="service-icon"><img src="img/farte-logo38.png"></div>
 						<div class="service-text">
-							<h3>Farte - Chrome Extetion</h3>
-							<p> Helt enkel Chrome exteion som Henter ut busstider i Telemark fylke</p>
+							<h3>Farte - Chrome Extension</h3>
+							<p> Helt enkel Chrome extension som Henter ut busstider i Telemark fylke</p>
 						</div>
 					</div>
 				</div>
@@ -125,8 +125,8 @@
 				<div class="port-sec">
 					<div class="col-md-12 fil-btn text-center">
 							<div class="filter wrk-title active" data-filter="all">Show All</div>
-							<div class="filter wrk-title" data-filter=".category-1">VKT-Extention</div>
-							<div class="filter wrk-title" data-filter=".category-2">Farte-Extenion</div>
+							<div class="filter wrk-title" data-filter=".category-1">VKT-Extension</div>
+							<div class="filter wrk-title" data-filter=".category-2">Farte-Extension</div>
 							<!--<div class="filter wrk-title lst-cld" data-filter=".category-3">SEO</div>-->
 					</div>
 					<div id="Container">
@@ -183,7 +183,7 @@
 								<img src="img/FB_IMG_1439402146359.jpg" class="img-responsive">
 							</div>
 							<div class="fig-caption">
-								<h3>Jørgen Joahnsen</h3>
+								<h3>Jørgen Johansen</h3>
 								<p class="marb-20">Student ved Universitetet i Agder</p>
 								<p>Følg meg:</p>
 								<ul class="team-social">
@@ -221,14 +221,15 @@
 			<div class="row">
 				<div class="page-title text-center">
 					<h1>Kontakt meg</h1>
-					<p>Her kan du enkelt kontakte meg hvis det skulle være noe du lurer på <br> Eller send meg en <a href="mailto:post@jorgenjohansen.no">mail</a>  </p>
+					<p>Er det noe du lurer på så send meg gjerne en <a href="mailto:post@jorgenjohansen.no">mail</a>  </p>
+					<!--<p>Her kan du enkelt kontakte meg hvis det skulle være noe du lurer på <br> Eller send meg en <a href="mailto:post@jorgenjohansen.no">mail</a>  </p>-->
 					<hr class="pg-titl-bdr-btm"></hr>
 				</div>
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                 <div id="errormessage"></div>
 
-				<div class="form-sec">
-                	<form action="" method="post" role="form" class="contactForm">
+				<!--<div class="form-sec">
+                	<form action="" method="post" role="form" class="contactForm" id="contactForm">
                     	<div class="col-md-4 form-group">
                             <input type="text" name="name" class="form-control text-field-box" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                             <div class="validation"></div>
@@ -248,7 +249,7 @@
                             <button class="button-medium" id="contact-submit" type="submit" name="send">Send</button>
                         </div>
                     </form>
-                </div>
+                </div>-->
 			</div>
 		</div>
 	</div>
@@ -298,7 +299,8 @@
   	<script src="js/jquery.mixitup.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+	<!--<script type="text/javascript" src="contact.js"></script>-->
+  <!--<script src="contactform/contactform.js"></script>-->
 </body>
 </html>
 
@@ -316,14 +318,7 @@
     $message = $_POST["message"];
     $subject_msg = $_POST["subject"];
     $send = $_POST["send"];
-    //Gjør en sjekk på om knappen er trykket, hvis ikke fade in - innholdet
-    if (!(isset($_POST["send"]))) {
-        echo("<script type='text/javascript'>
- $(document).ready(function() {
- $('article').fadeIn(3000);
- });
- </script> ");
- }
+
  //hvis knappen er trykket på kjør koden under
  if ((isset($_POST["send"]))) {
 	 //Sjekk om feltene er tomme
@@ -333,7 +328,7 @@
 
 	 } // Ta informasjonen i feltene på send på epost til designert konto
 	 else {
-		 //header('refresh: 4; url=index.php');
+		 header('refresh: 4; url=index.php');
 		 $eMail = $_POST["eMail"];
 		 $to = "jorgen2_johansen@hotmail.com";
 		 $subject = $subject_msg;
@@ -348,14 +343,15 @@
 		 $userheaders = "From: you@youremailaddress.com\n";
 		 $usermessage = "Thank you for subscribing to our mailing list.";
 
-     $sendseq = mail($to, $subject, $messageMain, $header, $message);
+     $sendseq = mail($to, $subject, $messageMain, $message, $header);
 
      if($sendseq == true){
        echo "Mail sendt";
      }
      else {
+     	printf(error_get_last());
        echo "Mail not sendt"."<br/>";
-       print_r(error_get_last())."<br/>";
+       //(error_get_last())."<br/>";
        echo "to:".$to."<br/>";
        echo "Subject:".$subject."<br/>";
        echo "MessageMain:".$messageMain."<br/>";
@@ -363,9 +359,8 @@
        echo "Message:".$message;
      }
 		 // mail($user,$user_message,$usersubject,$usermessage,$userheaders);
-
-		 echo("<p id ='sucsess'>Meldingen din er nå sendt!</p>");
-		 echo("<p id ='sucsess_redirect'>Du sendes nå tilbake til forsiden</p>");
+		// echo("<p id ='sucsess'>Meldingen din er nå sendt!</p>");
+		// echo("<p id ='sucsess_redirect'>Du sendes nå tilbake til forsiden</p>");
 
 	}
  }
