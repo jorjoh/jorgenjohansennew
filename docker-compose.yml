@@ -6,7 +6,6 @@ web:
     - "443:443"
   volumes:
     - ./html:/usr/share/nginx/html
-    - ./etc/nginx/ssl:/etc/nginx/ssl
   links:
     - php
 
