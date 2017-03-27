@@ -15,8 +15,9 @@ MAINTAINER Jørgen Johansen
 RUN apt-get update
 
 RUN apt-get install -y postfix
-RUN apt-get install -y mailutils
-RUN apt-get install -y sendmail
+#RUN apt-get install mail
+#RUN apt-get install -y mailutils
+#RUN apt-get install -y sendmail
 # Install necessary tools
 RUN apt-get install -y nano wget dialog net-tools
 
@@ -27,7 +28,9 @@ RUN apt-get install -y nginx
 RUN rm -v /etc/nginx/nginx.conf
 
 # Copy a configuration file from the current directory
-ADD nginx.conf /etc/nginx/
+COPY nginx.conf /etc/nginx/
+
+COPY /etc/nginx/ssl /etc/nginx/ssl
 
 # Append "daemon off;" to the beginning of the configuration
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
