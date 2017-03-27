@@ -30,8 +30,6 @@ RUN rm -v /etc/nginx/nginx.conf
 # Copy a configuration file from the current directory
 COPY nginx.conf /etc/nginx/
 
-ADD /etc/nginx/ssl /etc/nginx/ssl
-
 # Append "daemon off;" to the beginning of the configuration
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
