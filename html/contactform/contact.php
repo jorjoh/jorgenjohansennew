@@ -1,8 +1,14 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Jørgen Johansen
+ * Date: 24.01.2017
+ * Time: 21:37
+ */
 
 // configure
 $from = 'info@jorgenjohansen.no';
-$sendTo = 'jorgen2_johansen@hotmail.com';
+$sendTo = 'post@jorgenjohansen.no';
 $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in the email
 $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
@@ -26,7 +32,7 @@ try
         'Reply-To: ' . $from,
         'Return-Path: ' . $from,
     );
-    
+
     mail($sendTo, $subject, $emailText, implode("\n", $headers));
 
     $responseArray = array('type' => 'success', 'message' => $okMessage);

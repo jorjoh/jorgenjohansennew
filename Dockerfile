@@ -1,4 +1,4 @@
-############################################################
+﻿############################################################
 # Dockerfile to build Nginx Installed Containers
 # Based on Ubuntu
 ############################################################
@@ -29,6 +29,8 @@ RUN rm -v /etc/nginx/nginx.conf
 
 # Copy a configuration file from the current directory
 ADD nginx.conf /etc/nginx/
+ADD /etc/nginx/snippets /etc/nginx/snippets
+ADD /etc/nginx/ssl /etc/nginx/ssl
 
 # Append "daemon off;" to the beginning of the configuration
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf

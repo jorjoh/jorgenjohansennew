@@ -1,11 +1,13 @@
-web:
-  image: jorjoh/jorgenjohansennew
+﻿web:
+  build: .
   restart: always
   ports:
     - "80:80"
     - "443:443"
   volumes:
     - ./html:/usr/share/nginx/html
+    - ./etc/nginx/snippets:/etc/nginx/snippets
+    - ./etc/nginx/ssl:/etc/nginx/ssl
   links:
     - php
 
